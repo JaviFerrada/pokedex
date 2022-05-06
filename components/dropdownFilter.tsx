@@ -1,9 +1,38 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import styles from '../styles/OrderByBar.module.css'
+import { useDispatch } from 'react-redux'
+import {
+  orderByAZ,
+  orderByInferiorNumber,
+  orderBySuperiorNumber,
+  orderByZA,
+  shufflePokemon,
+} from '../src/redux/reducers/pokemonSlice'
 
 const DropdownFilter = () => {
+  const [selected, setSelected] = useState('Ordenar por ...')
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(orderByInferiorNumber())
+  }, [])
+
+  const handleClickCategory = (event: any) => {
+    const newSelection = event.target.text
+    setSelected(newSelection)
+    if (newSelection == 'Número Inferior') {
+      dispatch(orderByInferiorNumber())
+    } else if (newSelection == 'Número Superior') {
+      dispatch(orderBySuperiorNumber())
+    } else if (newSelection == 'A - Z') {
+      dispatch(orderByAZ())
+    } else if (newSelection == 'Z - A') {
+      dispatch(orderByZA())
+    }
+  }
+
   return (
     <Menu
       as="div"
@@ -13,7 +42,7 @@ const DropdownFilter = () => {
         <Menu.Button
           className={`${styles.bgBlack} inline-block justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500`}
         >
-          Ordenar por ...
+          {selected}
           <ChevronDownIcon
             className="-mr-1 ml-2 h-5 w-6 float-right"
             aria-hidden="true"
@@ -35,9 +64,9 @@ const DropdownFilter = () => {
         >
           <div className="py-1">
             <Menu.Item>
-              {({ active }) => (
+              {() => (
                 <a
-                  href="#"
+                  onClick={handleClickCategory}
                   className={`${styles.bgLightBlack} block px-4 py-2 text-sm `}
                 >
                   Número Inferior
@@ -45,9 +74,9 @@ const DropdownFilter = () => {
               )}
             </Menu.Item>
             <Menu.Item>
-              {({ active }) => (
+              {() => (
                 <a
-                  href="#"
+                  onClick={handleClickCategory}
                   className={`${styles.bgLightBlack} block px-4 py-2 text-sm `}
                 >
                   Número Superior
@@ -55,9 +84,9 @@ const DropdownFilter = () => {
               )}
             </Menu.Item>
             <Menu.Item>
-              {({ active }) => (
+              {() => (
                 <a
-                  href="#"
+                  onClick={handleClickCategory}
                   className={`${styles.bgLightBlack} block px-4 py-2 text-sm `}
                 >
                   A - Z
@@ -65,9 +94,9 @@ const DropdownFilter = () => {
               )}
             </Menu.Item>
             <Menu.Item>
-              {({ active }) => (
+              {() => (
                 <a
-                  href="#"
+                  onClick={handleClickCategory}
                   className={`${styles.bgLightBlack} block px-4 py-2 text-sm`}
                 >
                   Z - A

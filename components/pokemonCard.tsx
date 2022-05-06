@@ -1,14 +1,12 @@
-import { Pokemon } from '../interfaces/pokemon'
+import { Pokemon } from '../src/interfaces/pokemon'
 import styles from '../styles/PokemonCard.module.css'
 import Tag from './tag'
 
 interface CardProps {
-  pokemons: Pokemon[]
+  pokemon: Pokemon
 }
 
-const PokemonCard = ({ pokemons }: CardProps) => {
-  const pokemon = pokemons[0]
-
+const PokemonCard = ({ pokemon }: CardProps) => {
   return (
     <div className="mb-10">
       <img src={pokemon.ThumbnailImage} className={`${styles.image} rounded`} />

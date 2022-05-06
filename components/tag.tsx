@@ -5,13 +5,11 @@ interface TagProps {
 }
 
 const Tag = ({ text }: TagProps) => {
-
   return (
     <div className={`${styles.tag} rounded bg-${text}`}>
       <span>{text}</span>
     </div>
   )
 }
-
 
 export default Tag
