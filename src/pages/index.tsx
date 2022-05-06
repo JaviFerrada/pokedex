@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>Pokédex | Pokemon.com </title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/pokemon.ico" />
       </Head>
 
       <main className={`${styles.main} md:container md:mx-auto`}>

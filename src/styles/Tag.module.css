@@ -1,0 +1,12 @@
+.tag {
+  margin: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 110px;
+  width: 38%;
+  float: left;
+  font-size: 11px;
+  text-align: center;
+  background-color: #a4acaf;
+  color: #212121;
+}

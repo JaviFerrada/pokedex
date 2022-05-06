@@ -1,7 +1,7 @@
 import styles from '../styles/OrderByBar.module.css'
 import DropdownFilter from './dropdownFilter'
 import { useDispatch } from 'react-redux'
-import { shufflePokemon } from '../src/redux/reducers/pokemonSlice'
+import { shufflePokemon } from '../redux/reducers/pokemonSlice'
 
 const OrderByBar = () => {
   const dispatch = useDispatch()

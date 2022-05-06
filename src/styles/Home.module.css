@@ -1,0 +1,27 @@
+.main {
+  box-sizing: border-box;
+  background: #fff url('../../public/container_bg.png');
+  clear: both;
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.contentWrapper {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 80%;
+}
+
+.titlePage {
+  color: #919191;
+  cursor: default;
+  font-size: 187.5%;
+  line-height: 125%;
+  text-transform: none;
+  font-family: 'Flexo-Regular', arial, sans-serif;
+}

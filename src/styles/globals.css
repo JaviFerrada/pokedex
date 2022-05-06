@@ -6,7 +6,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: #424242 url("../public/body_bg.png");
+  background: #424242 url("../../public/body_bg.png");
   font-family: "Flexo-Regular",arial,sans-serif;
   font-size: 16px;
   color: #fff;

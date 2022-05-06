@@ -8,8 +8,7 @@ import {
   orderByInferiorNumber,
   orderBySuperiorNumber,
   orderByZA,
-  shufflePokemon,
-} from '../src/redux/reducers/pokemonSlice'
+} from '../redux/reducers/pokemonSlice'
 
 const DropdownFilter = () => {
   const [selected, setSelected] = useState('Ordenar por ...')
@@ -19,8 +18,8 @@ const DropdownFilter = () => {
     dispatch(orderByInferiorNumber())
   }, [])
 
-  const handleClickCategory = (event: any) => {
-    const newSelection = event.target.text
+  function handleClickCategory(event: any): void {
+    const newSelection = event.target?.text || 'Ordenar por ...'
     setSelected(newSelection)
     if (newSelection == 'Número Inferior') {
       dispatch(orderByInferiorNumber())

@@ -1,4 +1,4 @@
-import { Pokemon } from '../src/interfaces/pokemon'
+import { Pokemon } from '../interfaces/pokemon'
 import styles from '../styles/PokemonCard.module.css'
 import Tag from './tag'
 

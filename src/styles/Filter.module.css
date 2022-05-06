@@ -19,11 +19,7 @@
 
 .bannerContainer {
   border-radius: 5px;
-  /* float: left; */
-  /* padding-bottom: 0.5em; */
   width: 77%;
-  /* max-height: 80px;
-    min-height: 70px; */
 }
 
 .title {
@@ -65,7 +61,6 @@
   margin-right: -100%;
   width: 12.95%;
   margin-left: 79.8025%;
-  /* background-image: url("../img/chrome/forms/input-search-bg.png"); */
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
