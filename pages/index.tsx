@@ -1,0 +1,29 @@
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import Image from 'next/image'
+import Filter from '../components/filter'
+import OrderByBar from '../components/orderByBar'
+import PokemonList from '../components/pokemonList'
+import styles from '../styles/Home.module.css'
+
+const Home: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Pokédex | Pokemon.com </title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className={styles.main}>
+        <div className={styles.contentWrapper}>
+          <h1 className={`${styles.titlePage} pt-12 p-4 m-3`}>Pokédex</h1>
+          <Filter />
+          <OrderByBar />
+          <PokemonList />
+        </div>
+      </main>
+    </div>
+  )
+}
+
+export default Home

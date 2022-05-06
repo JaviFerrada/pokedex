@@ -1,0 +1,37 @@
+.buttonContainer {
+    float: left;
+    
+    margin-left: 7%;
+}
+
+.bgLightblue {
+    background-color: #30a7d7;
+}
+
+.w71 {
+    width: 71%;
+}
+
+.w100{
+    width:100%;
+}
+
+.mt30 {
+    margin-top: 13rem;
+}
+
+.bgLightblue:hover {
+    background-color: #1b82b1;
+}
+
+.bgBlack {
+    background-color: #313131;
+}
+
+.bgLightBlack {
+    background-color: #616161;
+}
+
+.bgLightBlack:hover {
+    background-color: #313131;
+}
