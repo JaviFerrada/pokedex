@@ -18,7 +18,7 @@ const DropdownFilter = () => {
     dispatch(orderByInferiorNumber())
   }, [])
 
-  function handleClickCategory(event: any): void {
+  function handleClickCategory(event: any) {
     const newSelection = event.target?.text || 'Ordenar por ...'
     setSelected(newSelection)
     if (newSelection == 'Número Inferior') {

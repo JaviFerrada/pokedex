@@ -13,6 +13,7 @@
     "@headlessui/react": "^1.6.1",
     "@heroicons/react": "^1.0.6",
     "@reduxjs/toolkit": "^1.8.1",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
     "axios": "^0.27.2",
     "cors": "^2.8.5",
     "next": "12.1.6",

@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Filter from '../components/filter'
 import OrderByBar from '../components/orderByBar'
 import PokemonList from '../components/pokemonList'
