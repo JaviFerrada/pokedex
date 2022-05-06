@@ -7,9 +7,7 @@ export default async function handler(
   res: NextApiResponse<any>
 ) {
   try{
-    console.log("LLAMANDO...")
     const received = await axios.get('https://www.pokemon.com/el/api/pokedex/kalos')
-    console.log("DATA", res)
     res.status(200).json({ pokemons: received.data })
   } catch (error: any) {
      console.error(error)

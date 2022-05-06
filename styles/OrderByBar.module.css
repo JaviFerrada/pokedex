@@ -17,8 +17,18 @@
 }
 
 .mt30 {
-    margin-top: 13rem;
+    margin-top: 23rem;
 }
+
+@media(min-width: 768px){
+    .mt30 {
+    margin-top: 13rem;
+}}
+
+@media(max-width: 476px){
+    .mt30 {
+    margin-top: 26rem;
+}}
 
 .bgLightblue:hover {
     background-color: #1b82b1;

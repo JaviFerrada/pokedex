@@ -3,8 +3,10 @@ import styles from '../styles/Filter.module.css'
 const Filter = () => {
   return (
     <div className={`${styles.filterContainer}`}>
-      <div className={`${styles.filterContent} grid grid-cols-2 gap-3`}>
-        <div className={`${styles.bannerContainer} mt-8 ml-7`}>
+      <div
+        className={`${styles.filterContent} grid grid-cols-1 gap-3 md:grid-cols-2`}
+      >
+        <div className={`${styles.bannerContainer} mt-8 mx-7`}>
           <div className={`${styles.title}`}> Nombre o número</div>
           <div className="flex justify-center w-full max-h-12">
             <div className="mb-3 w-full ">
@@ -44,10 +46,12 @@ const Filter = () => {
             debilidad, habilidad y demás datos!
           </p>
         </div>
-        <div className={`${styles.bannerContainer} ${styles.bgGreen} mt-8 `}>
+        <div
+          className={`${styles.bannerContainer} ${styles.bgGreen} ${styles.bannerHeight} my-8 ml-7 flex justify-center `}
+        >
           <h2 className={`${styles.banner}`}>
-            Busca un Pokémon por su nombre o <br />
-            usando su número de la Pokédex Nacional.
+            Busca un Pokémon por su nombre o usando su número de la Pokédex
+            Nacional.
           </h2>
         </div>
       </div>
