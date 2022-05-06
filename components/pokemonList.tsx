@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Pokemon } from '../interfaces/pokemon'
 import PokemonCard from './pokemonCard'
@@ -9,21 +10,25 @@ const PokemonList = () => {
   const [isLoading, setLoading] = useState(false)
 
   useEffect(() => {
-    setLoading(true)
-    fetch('https://www.pokemon.com/el/api/pokedex/kalos', {
-      headers: { 'Access-Control-Allow-Origin': '*' }
-    })
-      .then(res => res.json())
-      .then(res => {
-        const groupPokemons = res.reduce((list: any, item: Pokemon) => {
-          const { number } = item
-          list[number] = list[number] ?? []
-          list[number].push(item)
-          return list
-        }, {})
-        setData(groupPokemons)
-        setLoading(false)
-      })
+    const getPokemonList = async () => {
+      setLoading(true)
+      await axios
+        .get('/api/getPokemonList')
+        .then(({ data }: { data: { pokemons: Pokemon[] } }) => {
+          const groupPokemons = data.pokemons.reduce(
+            (list: any, item: Pokemon) => {
+              const { number } = item
+              list[number] = list[number] ?? []
+              list[number].push(item)
+              return list
+            },
+            {}
+          )
+          setData(groupPokemons)
+          setLoading(false)
+        })
+    }
+    getPokemonList()
   }, [])
 
   const loadMorePokemons = () => {
